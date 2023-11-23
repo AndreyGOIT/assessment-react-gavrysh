@@ -1,10 +1,20 @@
-import { Button } from "../Button/Button";
+// Импортируем хук
+import { useDispatch } from "react-redux";
+// Импортируем генератор экшена
+import { addTask } from "../../redux/tasks/actions";
 import css from "./TaskForm.module.css";
 
 export const TaskForm = () => {
+  // Получаем ссылку на функцию отправки экшенов
+  const dispatch = useDispatch();
+
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(event.target);
     const form = event.target;
+    // Вызываем генератор экшена и передаем текст задачи для поля payload
+    // Отправляем результат - экшен создания задачи
+    dispatch(addTask(form.elements.text.value));
     form.reset();
   };
 
@@ -16,7 +26,7 @@ export const TaskForm = () => {
         name="text"
         placeholder="Enter task text..."
       />
-      <Button type="submit">Add task</Button>
+      <button type="submit">Add task</button>
     </form>
   );
 };
