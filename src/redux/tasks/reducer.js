@@ -4,11 +4,11 @@ import { statusFilters } from "../filters/constants";
 
 // // Код редюсеров tasksReducer и filtersReducer
 const tasksInitialState = [
-  { id: 0, text: "Learn HTML and CSS", completed: true },
-  { id: 1, text: "Get good at JavaScript", completed: true },
-  { id: 2, text: "Master React", completed: false },
-  { id: 3, text: "Discover Redux", completed: false },
-  { id: 4, text: "Build amazing apps", completed: false },
+  { id: 0, text: "TODO 1", completed: true },
+  { id: 1, text: "TODO 2", completed: true },
+  { id: 2, text: "TODO 3", completed: false },
+  { id: 3, text: "TODO 4", completed: false },
+  { id: 4, text: "TODO 5", completed: false },
 ];
 
 // Отвечает только за обновление свойства tasks

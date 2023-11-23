@@ -1,9 +1,11 @@
 // Импортируем хук
 import { useSelector } from "react-redux";
+import { getTasks } from "../../redux/tasks/selectors";
+import css from "./TaskCounter.module.css";
 
 export const TaskCounter = () => {
   // Получаем массив задач из состояния Redux
-  const tasks = useSelector((state) => state.tasks);
+  const tasks = useSelector(getTasks);
 
   // На базе состояния Redux получаем производные данные
   const count = tasks.reduce(
@@ -20,8 +22,8 @@ export const TaskCounter = () => {
 
   return (
     <div>
-      <p>Active: {count.active}</p>
-      <p>Completed: {count.completed}</p>
+      <p className={css.text}>Active: {count.active}</p>
+      <p className={css.text}>Completed: {count.completed}</p>
     </div>
   );
 };

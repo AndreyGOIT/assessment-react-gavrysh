@@ -10,7 +10,6 @@ export const TaskForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(event.target);
     const form = event.target;
     // Вызываем генератор экшена и передаем текст задачи для поля payload
     // Отправляем результат - экшен создания задачи
