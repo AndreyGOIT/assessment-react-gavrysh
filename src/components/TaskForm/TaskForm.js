@@ -1,7 +1,7 @@
 // Импортируем хук
 import { useDispatch } from "react-redux";
 // Импортируем генератор экшена
-import { addTask } from "../../redux/tasks/actions";
+import { addTask } from "../../redux/operations";
 import css from "./TaskForm.module.css";
 
 export const TaskForm = () => {
