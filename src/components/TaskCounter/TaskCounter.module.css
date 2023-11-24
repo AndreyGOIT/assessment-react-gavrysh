@@ -1,3 +1,10 @@
 .text {
   margin: 0;
 }
+
+/* Адаптивные стили для экранов шириной до 360px */
+@media screen and (max-width: 360px) {
+  .text {
+    font-size: 14px;
+  }
+}

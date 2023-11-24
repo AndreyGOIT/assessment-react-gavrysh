@@ -23,3 +23,11 @@
   background-color: #1565c0;
   color: #fff;
 }
+
+/* Адаптивные стили для экранов шириной до 361px */
+@media screen and (max-width: 361px) {
+  .btn {
+    padding: 6px 10px; /* Уменьшенные отступы */
+    font-size: 14px; /* Уменьшенный размер шрифта */
+  }
+}
